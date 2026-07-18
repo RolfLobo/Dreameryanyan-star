@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>小星妍 · Dreamer IP 手册</title>
+<style>
+  :root {
+    --paper: #fbf8f0;
+    --paper-soft: #f5f0e0;
+    --ink: #1a1614;
+    --ink-muted: #6a6560;
+    --honey: #EDB84A;
+    --honey-deep: #C9962A;
+    --red: #E43C31;
+    --blue: #3670D8;
+    --orange: #E86B27;
+    --hair: rgba(26,22,20,.14);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { background: var(--paper); }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Iowan Old Style', 'Palatino Linotype', 'Songti SC', 'Noto Serif SC', Georgia, serif;
+    line-height: 1.6;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    padding: 60px 40px 120px;
+  }
+
+  .wrap { max-width: 1160px; margin: 0 auto; }
+
+  /* ============ MASTHEAD ============ */
+  .masthead {
+    border-top: 2px solid var(--ink);
+    border-bottom: 1px solid var(--ink);
+    padding: 18px 0 22px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 44px;
+  }
+  .masthead-left h1 {
+    font-size: 40px;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    line-height: 1.05;
+  }
+  .masthead-left h1 em {
+    font-style: italic;
+    color: var(--honey-deep);
+    font-weight: 400;
+  }
+  .masthead-left .sub {
+    margin-top: 8px;
+    font-size: 14px;
+    color: var(--ink-muted);
+    font-family: 'Iowan Old Style', 'Palatino Linotype', Georgia, serif;
+    font-style: italic;
+  }
+  .masthead-right {
+    text-align: right;
+    font-size: 12px;
+    color: var(--ink-muted);
+    letter-spacing: 0.5px;
+  }
+  .masthead-right .issue {
+    font-family: 'Iowan Old Style', Georgia, serif;
+    font-style: italic;
+    font-size: 14px;
+  }
+  .masthead-right .plate {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--honey-deep);
+    font-weight: 600;
+    margin-top: 4px;
+  }
+
+  /* ============ TABLE OF CONTENTS ============ */
+  .toc {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    border-top: 1px solid var(--hair);
+    border-bottom: 1px solid var(--hair);
+    margin-bottom: 60px;
+  }
+  .toc a {
+    padding: 22px 20px;
+    color: var(--ink);
+    text-decoration: none;
+    border-right: 1px solid var(--hair);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    transition: background .18s;
+  }
+  .toc a:last-child { border-right: 0; }
+  .toc a:hover { background: var(--paper-soft); }
+  .toc-num {
+    font-family: 'Iowan Old Style', Georgia, serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--ink-muted);
+    text-transform: uppercase;
+  }
+  .toc-label { font-size: 15px; font-weight: 500; }
+
+  /* ============ SECTIONS ============ */
+  section { margin-bottom: 90px; }
+  .section-head {
+    display: flex;
+    align-items: baseline;
+    gap: 20px;
+    margin-bottom: 32px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--ink);
+  }
+  .section-num {
+    font-family: 'Iowan Old Style', Georgia, serif;
+    font-style: italic;
+    color: var(--honey-deep);
+    font-size: 20px;
+  }
+  .section-head h2 {
+    font-size: 26px;
+    font-weight: 500;
+    letter-spacing: -0.3px;
+  }
+  .section-head .caption {
+    margin-left: auto;
+    color: var(--ink-muted);
+    font-size: 13px;
+    font-style: italic;
+  }
+
+  /* ============ SPEC GRID ============ */
+  .spec-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--hair);
+    border: 1px solid var(--hair);
+  }
+  .spec-cell {
+    background: var(--paper);
+    padding: 22px 22px 24px;
+  }
+  .spec-cell .k {
+    font-family: 'Iowan Old Style', Georgia, serif;
+    font-size: 11px;
+    letter-spacing: 1.8px;
+    color: var(--ink-muted);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .spec-cell .v {
+    font-size: 15px;
+    line-height: 1.55;
+  }
+  .spec-cell .v code {
+    font-family: 'Menlo', 'SF Mono', monospace;
+    font-size: 12px;
+    background: var(--paper-soft);
+    padding: 1px 6px;
+    border-radius: 3px;
+    color: var(--honey-deep);
+  }
+  .swatch-strip {
+    display: flex;
+    gap: 6px;
+    margin-top: 8px;
+  }
+  .sw {
+    width: 24px; height: 24px;
+    border-radius: 3px;
+    border: 1px solid rgba(0,0,0,.06);
+  }
+  .sw-label {
+    font-family: 'Menlo', 'SF Mono', monospace;
+    font-size: 10px;
+    color: var(--ink-muted);
+    margin-top: 2px;
+    text-align: center;
+  }
+
+  /* ============ REFERENCE GALLERY ============ */
+  .ref-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .ref-card {
+    display: flex;
+    flex-direction: column;
+  }
+  .ref-frame {
+    aspect-ratio: 3 / 4;
+    background: var(--paper-soft);
+    border: 1px solid var(--hair);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .ref-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .ref-placeholder {
+    padding: 20px;
+    text-align: center;
+    color: var(--ink-muted);
+    font-size: 12px;
+    line-height: 1.6;
+  }
+  .ref-placeholder .icon {
+    font-size: 24px;
+    color: var(--honey);
+    margin-bottom: 8px;
+    font-family: Georgia, serif;
+    font-style: italic;
+  }
+  .ref-placeholder code {
+    font-family: 'Menlo', 'SF Mono', monospace;
+    font-size: 10px;
+    background: rgba(0,0,0,.04);
+    padding: 2px 6px;
+    border-radius: 3px;
+    display: inline-block;
+    margin-top: 6px;
+    color: var(--ink);
+    word-break: break-all;
+  }
+  .ref-meta {
+    padding-top: 12px;
+  }
+  .ref-meta .tag {
+    display: inline-block;
+    font-family: 'Iowan Old Style', Georgia, serif;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: var(--honey-deep);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .ref-meta h3 {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 4px;
+    letter-spacing: -0.2px;
+  }
+  .ref-meta p {
+    font-size: 12px;
+    color: var(--ink-muted);
+    line-height: 1.5;
+  }
+
+  /* ============ POSE CARDS ============ */
+  .pose-list {
+    display: grid;
+    gap: 40px;
+  }
+  .pose-card {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 32px;
+    padding-bottom: 40px;
+    border-bottom: 1px dashed var(--hair);
+  }
+  .pose-card:last-child { border-bottom: 0; }
+
+  .pose-image {
+    aspect-ratio: 3 / 4;
+    background: var(--paper-soft);
+    border: 1px solid var(--hair);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .pose-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .pose-placeholder {
+    padding: 24px;
+    text-align: center;
+    color: var(--ink-muted);
+    font-size: 12px;
+  }
+  .pose-placeholder .n {
+    font-family: 'Iowan Old Style', Georgia, serif;
+    font-style: italic;
+    color: var(--honey);
+    font-size: 48px;
+    line-height: 1;
+    margin-bottom: 12px;
+  }
+
+  .pose-body h3 {
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: -0.3px;
+    margin-bottom: 4px;
+  }
+  .pose-body .pose-num {
+    font-family: 'Iowan Old Style', Georgia, serif;
+    font-style: italic;
+    color: var(--honey-deep);
+    font-size: 14px;
+    margin-right: 8px;
+  }
+  .pose-summary {
+    font-size: 14px;
+    color: var(--ink-muted);
+    line-height: 1.65;
+    margin: 8px 0 18px;
+  }
+  .pose-attrs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 22px;
+    font-size: 12px;
+    color: var(--ink-muted);
+    margin-bottom: 20px;
+  }
+  .pose-attrs .attr strong {
+    color: var(--ink);
+    font-weight: 600;
+    margin-right: 4px;
+  }
+  .pose-attrs .attr .glyph {
+    color: var(--honey-deep);
+    font-family: 'Iowan Old Style', Georgia, serif;
+    font-style: italic;
+  }
+
+  /* ============ PROMPT BLOCK ============ */
+  .prompt-block {
+    background: var(--paper-soft);
+    border-left: 3px solid var(--honey);
+    padding: 18px 20px 18px 22px;
+    position: relative;
+    margin-top: 8px;
+  }
+  .prompt-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+  }
+  .prompt-label {
+    font-family: 'Iowan Old Style', Georgia, serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--ink-muted);
+    text-transform: uppercase;
+  }
+  .prompt-copy {
+    background: var(--ink);
+    color: var(--paper);
+    border: 0;
+    padding: 6px 12px;
+    font-family: 'Iowan Old Style', Georgia, serif;
+    font-size: 11px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background .15s;
+  }
+  .prompt-copy:hover { background: var(--honey-deep); }
+  .prompt-copy.copied { background: var(--honey-deep); }
+
+  .prompt-body {
+    font-family: 'Menlo', 'SF Mono', 'Consolas', monospace;
+    font-size: 11.5px;
+    line-height: 1.6;
+    color: var(--ink);
+    max-height: 220px;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+  .prompt-body::-webkit-scrollbar { width: 6px; }
+  .prompt-body::-webkit-scrollbar-thumb { background: var(--hair); }
+
+  .prompt-toggle {
+    background: transparent;
+    border: 0;
+    color: var(--honey-deep);
+    font-size: 12px;
+    cursor: pointer;
+    padding: 8px 0 0;
+    font-family: inherit;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  /* ============ USAGE NOTES ============ */
+  .notes-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+    border: 1px solid var(--hair);
+  }
+  .notes-cell {
+    padding: 22px 24px;
+    border-right: 1px solid var(--hair);
+    border-bottom: 1px solid var(--hair);
+  }
+  .notes-cell:nth-child(2n) { border-right: 0; }
+  .notes-cell:nth-last-child(-n+2) { border-bottom: 0; }
+  .notes-cell .n {
+    font-family: 'Iowan Old Style', Georgia, serif;
+    font-style: italic;
+    color: var(--honey-deep);
+    font-size: 32px;
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+  .notes-cell h4 {
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+  .notes-cell p {
+    font-size: 13px;
+    color: var(--ink-muted);
+    line-height: 1.65;
+  }
+  .notes-cell code {
+    font-family: 'Menlo', monospace;
+    font-size: 11px;
+    background: var(--paper-soft);
+    padding: 1px 5px;
+    border-radius: 3px;
+    color: var(--ink);
+  }
+
+  /* ============ FOOTER ============ */
+  footer {
+    margin-top: 90px;
+    padding-top: 24px;
+    border-top: 1px solid var(--ink);
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: 12px;
+    color: var(--ink-muted);
+  }
+  footer .sig {
+    font-family: 'Iowan Old Style', Georgia, serif;
+    font-style: italic;
+    color: var(--honey-deep);
+    font-size: 16px;
+  }
+
+  /* ============ TOAST ============ */
+  #toast {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background: var(--ink);
+    color: var(--paper);
+    padding: 12px 22px;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .25s;
+    z-index: 100;
+  }
+  #toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width: 900px) {
+    body { padding: 40px 24px 80px; }
+    .toc { grid-template-columns: repeat(2, 1fr); }
+    .toc a { border-right: 0; border-bottom: 1px solid var(--hair); }
+    .toc a:nth-child(2n) { border-right: 0; }
+    .spec-grid, .ref-grid { grid-template-columns: 1fr 1fr; }
+    .pose-card { grid-template-columns: 1fr; }
+    .notes-grid { grid-template-columns: 1fr; }
+    .notes-cell { border-right: 0 !important; }
+    .masthead { flex-direction: column; align-items: flex-start; gap: 12px; }
+    .masthead-right { text-align: left; }
+  }
+  @media (max-width: 560px) {
+    .spec-grid, .ref-grid { grid-template-columns: 1fr; }
+    .masthead-left h1 { font-size: 30px; }
+    .section-head { flex-wrap: wrap; }
+    .section-head .caption { margin-left: 0; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <!-- ============================================================
+       MASTHEAD
+       ============================================================ -->
+  <header class="masthead">
+    <div class="masthead-left">
+      <h1>小星妍 <em>· Dreamer</em> · IP 手册</h1>
+      <div class="sub">Honey-yellow five-pointed star · editorial illustration for Chinese long-form writing · Tom Gauld × Christoph Niemann lineage</div>
+    </div>
+    <div class="masthead-right">
+      <div class="issue">Issue №1 · v6.2 · 2026.07</div>
+      <div class="plate">✦ 妍</div>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       TABLE OF CONTENTS
+       ============================================================ -->
+  <nav class="toc">
+    <a href="#spec">
+      <span class="toc-num">§01</span>
+      <span class="toc-label">角色规格</span>
+    </a>
+    <a href="#gallery">
+      <span class="toc-num">§02</span>
+      <span class="toc-label">原始参考 · 6 张</span>
+    </a>
+    <a href="#poses">
+      <span class="toc-num">§03</span>
+      <span class="toc-label">新姿态 · 4 段 Prompt</span>
+    </a>
+    <a href="#usage">
+      <span class="toc-num">§04</span>
+      <span class="toc-label">使用说明</span>
+    </a>
+  </nav>
+
+  <!-- ============================================================
+       § 01 · 角色规格
+       ============================================================ -->
+  <section id="spec">
+    <div class="section-head">
+      <span class="section-num">§ 01</span>
+      <h2>角色规格</h2>
+      <span class="caption">一眼锁形状的关键点</span>
+    </div>
+
+    <div class="spec-grid">
+      <div class="spec-cell">
+        <div class="k">Body</div>
+        <div class="v">蜂蜜黄五角星，5 个 gently rounded but clearly star-shaped 尖角，微 wobble，微斜。绝不正面立正。</div>
+      </div>
+      <div class="spec-cell">
+        <div class="k">Eyes / Mouth</div>
+        <div class="v">两个不对称小黑点。允许极小的嘴：小 <code>o</code>、短横线、或淡淡上翘弧。绝不大笑脸。</div>
+      </div>
+      <div class="spec-cell">
+        <div class="k">Legs / Arms</div>
+        <div class="v">细黑线，永远有姿态动词（mid-hop / braced / tiptoe / whoa）。需要时从尖角伸细手臂。</div>
+      </div>
+      <div class="spec-cell">
+        <div class="k">Crown</div>
+        <div class="v">紧贴头顶的 3 峰小皇冠，蜂蜜黄描边 + 轻填色。皇冠上方 3 颗小 sparkle 点。</div>
+      </div>
+      <div class="spec-cell">
+        <div class="k">Dreamer 弧</div>
+        <div class="v">紧贴 crown 的小手写弧，蜂蜜色墨水，身高的 <code>1/9</code>。绝不彩虹弧。</div>
+      </div>
+      <div class="spec-cell">
+        <div class="k">状态符号</div>
+        <div class="v">Dreamer 弧上方一个蜂蜜色描边小符号（`?` / 灯泡 / 皇冠 / 云 / 罗盘…），身高 <code>1/5</code>，只描边不填。</div>
+      </div>
+      <div class="spec-cell">
+        <div class="k">签名排线</div>
+        <div class="v">身体右下 6-10 笔 45° 短平行线。全图排线角度统一，只在 3 处（身体 / 主物件阴影 / 地面）。</div>
+      </div>
+      <div class="spec-cell">
+        <div class="k">纸底 &amp; 签名</div>
+        <div class="v">Warm cream <code>#fbf8f0</code>，禁纯白。右下角小签名 <code>妍 ✦</code>。</div>
+      </div>
+      <div class="spec-cell">
+        <div class="k">调色 · Palette</div>
+        <div class="v">蜂蜜黄仅用于星身 / Dreamer / 状态符号。红蓝橙仅用于批注。</div>
+        <div class="swatch-strip">
+          <div>
+            <div class="sw" style="background:#fbf8f0;border-color:#ddd6c0"></div>
+            <div class="sw-label">paper</div>
+          </div>
+          <div>
+            <div class="sw" style="background:#1a1614"></div>
+            <div class="sw-label">ink</div>
+          </div>
+          <div>
+            <div class="sw" style="background:#EDB84A"></div>
+            <div class="sw-label">honey</div>
+          </div>
+          <div>
+            <div class="sw" style="background:#E43C31"></div>
+            <div class="sw-label">red</div>
+          </div>
+          <div>
+            <div class="sw" style="background:#3670D8"></div>
+            <div class="sw-label">blue</div>
+          </div>
+          <div>
+            <div class="sw" style="background:#E86B27"></div>
+            <div class="sw-label">orange</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       § 02 · 原始参考 · 6 张
+       ============================================================ -->
+  <section id="gallery">
+    <div class="section-head">
+      <span class="section-num">§ 02</span>
+      <h2>原始参考图</h2>
+      <span class="caption">《AI 时代产品面试的观察》6 图 · 3:4 竖版</span>
+    </div>
+
+    <div class="ref-grid" id="ref-grid">
+      <!-- injected by JS -->
+    </div>
+  </section>
+
+  <!-- ============================================================
+       § 03 · 新姿态 · 4 段 Prompt
+       ============================================================ -->
+  <section id="poses">
+    <div class="section-head">
+      <span class="section-num">§ 03</span>
+      <h2>新姿态 · 4 段 Prompt</h2>
+      <span class="caption">复制整段，喂进 Nano Banana / Midjourney / 即梦 / GPT Image</span>
+    </div>
+
+    <div class="pose-list" id="pose-list">
+      <!-- injected by JS -->
+    </div>
+  </section>
+
+  <!-- ============================================================
+       § 04 · 使用说明
+       ============================================================ -->
+  <section id="usage">
+    <div class="section-head">
+      <span class="section-num">§ 04</span>
+      <h2>使用说明</h2>
+      <span class="caption">怎么把这份手册跑起来</span>
+    </div>
+
+    <div class="notes-grid">
+      <div class="notes-cell">
+        <div class="n">01</div>
+        <h4>放参考图</h4>
+        <p>把 5 张原始参考图存到 <code>assets/</code> 文件夹，命名按下方槽位提示（例如 <code>ref-01-carrying-together.png</code>）。刷新页面即可看到。</p>
+      </div>
+      <div class="notes-cell">
+        <div class="n">02</div>
+        <h4>跑新姿态</h4>
+        <p>点每张 pose 卡上的 <code>Copy</code>，切到你惯用的图像模型粘贴。生成好的 PNG 存到 <code>assets/</code> 用对应名字（<code>pose-01-jump.png</code>…）即可自动嵌入。</p>
+      </div>
+      <div class="notes-cell">
+        <div class="n">03</div>
+        <h4>QA 逐条过</h4>
+        <p>生成后照 <code>references/qa-checklist.md</code>：星形是否 5 角、Dreamer 是否紧弧、蜂蜜黄是否只在星身、纸底是否 cream、AI blob 是否非星形。</p>
+      </div>
+      <div class="notes-cell">
+        <div class="n">04</div>
+        <h4>不合格就重生</h4>
+        <p>模型对细节稳定性不同：Midjourney 星形最稳但中文字符差；即梦/豆包中文字符好但容易画丢皇冠。用 seed / 二次编辑修，不要在废图上强改。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer>
+    <div>小星妍 · Dreamer IP · v6.2 · Ian × Yan · 2026</div>
+    <div class="sig">妍 ✦</div>
+  </footer>
+
+</div>
+
+<div id="toast">已复制</div>
+
+<!-- ============================================================
+     DATA + LOGIC
+     ============================================================ -->
+<script>
+
+// 6 张原始参考图（对应 examples/six-vertical-illustrations.md 里 6 段）
+const REFERENCES = [
+  {
+    id: 'ref-01-exam-flip',
+    tag: 'shot 01',
+    title: '面试题翻面',
+    caption: '过去题·优化 UI ↔ 未来题·定义空白',
+    glyph: '灯泡 · 灵感初现',
+  },
+  {
+    id: 'ref-02-closed-manuals',
+    tag: 'shot 02',
+    title: '合上的经验书',
+    caption: '设计规范 / 最佳实践 / 标准答案 / 用户手册 · "没有答案"',
+    glyph: '`?` · 走向未知',
+  },
+  {
+    id: 'ref-03-interface-collaboration',
+    tag: 'shot 03',
+    title: 'Interface → Collaboration',
+    caption: '两个身影 + 划掉的旧按钮',
+    glyph: '对话气泡 · 在对谈中',
+  },
+  {
+    id: 'ref-04-carrying-together',
+    tag: 'shot 04',
+    title: '一起扛未来',
+    caption: '巨大 `?` 悬顶 · 星 + AI blob 并肩托起',
+    glyph: '皇冠 · 共主 / 同盟',
+  },
+  {
+    id: 'ref-05-app-to-agents',
+    tag: 'shot 05',
+    title: '一个 App → 一群 Agent',
+    caption: 'App 图标裂开 · Agent blob 群涌下 · 星在下方观察',
+    glyph: '云朵 · 脑洞打开',
+  },
+  {
+    id: 'ref-06-lockbox-keys',
+    tag: 'shot 06',
+    title: '4 把 ? 钥匙',
+    caption: '悬空锁盒"新的工作方式" · 星举 4 把 `?` 钥匙',
+    glyph: '星火 ✦ · 顿悟将至',
+  },
+];
+
+// 4 段新姿态 prompts
+const POSES = [
+  {
+    id: 'pose-01-jump',
+    num: '01',
+    title: '跳',
+    subtitle: 'mid-hop',
+    summary: '被抓拍的一瞬——腿一前一后蹬开，身体微斜，脚下留一小片残迹。不是站着，是有动能。',
+    glyph: '灯泡 · 灵感刚炸开',
+    ratio: '3:4 竖版',
+    prompt: `Generate one standalone 3:4 vertical editorial illustration in the tradition of Tom Gauld and Christoph Niemann — one bold concept, massive white space, unified hand-drawn parallel-hatching pen-stroke language.
+
+Visual DNA:
+Warm off-white cream paper background (#fbf8f0). Around 65% empty paper (mostly the upper and side regions). Confident hand-drawn warm-ink line work. Structural hatching only where volume/shadow makes sense. NO decorative elements, NO sparkles, NO patterns, NO shine.
+
+Recurring IP character (小星妍 · Xingyan):
+A small hand-drawn honey-yellow five-pointed star with gently rounded but clearly star-shaped points, drawn with a slight wobble and a subtle tilt of about -8° to the left (mid-air lean). Warm-black wobbly hand-drawn outline (#1a1614), 1-2 px feel with tiny breaks. Two tiny black dot eyes, slightly asymmetric, wide with excitement. A tiny mouth mark is allowed — a small "o" of joy — never a big cartoon grin. Thin black legs caught mid-hop: one leg kicks forward with a lifted foot, the other tucks back with the foot behind. Small foot marks at the end of each leg. No arms drawn in this pose — her whole body IS the jump. 6-10 short parallel diagonal hatching strokes on her lower-right side for volume.
+
+Dreamer signature: directly above her head, tucked close to the crown, a very SMALL handwritten "Dreamer" arcs gently in warm honey ink. Size ~1/9 her body height. Tight small curve, NOT a rainbow.
+
+Status glyph (above the Dreamer arc): a tiny hand-drawn LIGHT BULB in honey-yellow outline only (no fill), floating just above the Dreamer arc — her "idea just sparked" state that made her leap. Size ~1/5 her body height. Simple bulb silhouette with a tiny screw base, NO rays, NO sparkles.
+
+Signature bottom-right: tiny handwritten "妍 ✦" in warm honey ink.
+
+Single visual concept:
+Xingyan is caught mid-air in a small joyful hop, entirely lifted off the ground. Her body tilts back slightly with the momentum, one leg kicking forward, the other tucked back. She is in the middle of the empty cream page — the emptiness around her IS the "air" she jumps through. Directly below her, on the ground line, a small trail of 5-6 tiny hatch marks shows where her feet just left off.
+
+Composition (3:4 vertical):
+- Upper 45% of canvas: empty cream paper. Only the tiny Dreamer arc + tiny honey light-bulb glyph appear here, hugging the top of her crown.
+- Middle band (~35% of canvas): Xingyan mid-hop, centered horizontally, body tilted -8° left, legs bent asymmetrically (forward + back). Small honey-yellow crown perched on her top point.
+- Lower 20% of canvas: mostly empty cream, except for a small cluster of 5-6 short parallel hatching strokes on the ground line directly under her — the "she just left from here" trace. Two or three short motion streaks trail behind her body on the lower-left side.
+
+No Chinese labels in this image — the pose speaks alone.
+
+Hatching language (unified):
+Warm-black short parallel diagonal strokes at ~45° down-right, three places only: (1) lower-right of Xingyan's body (6-10 strokes), (2) ground trace where she jumped from (5-6 short strokes on the ground line), (3) two or three faint motion streaks trailing her lower-left side (2-3 strokes). NO hatching in the upper or side empty areas.
+
+Color use (strict):
+- Paper: warm cream (#fbf8f0).
+- Honey-yellow ONLY on Xingyan's body, the small crown on her head, the tiny "Dreamer" arc, and the tiny light-bulb status glyph outline above her head.
+- Warm-black ink for: Xingyan's outline, eyes, mouth mark, legs, feet, all hatching, the ground trace, the motion streaks.
+- No red, no blue, no orange in this scene.
+
+Anti-slop constraints:
+- Xingyan MUST be clearly OFF the ground — visible air gap between her feet and the ground trace below.
+- Body tilt is subtle (-8° only), not falling over.
+- The star has FIVE gently rounded points, not six, not rounded into a puffy shape.
+- NO speed lines, NO motion blur, NO cartoon whoosh — only the tiny hatching trail below and two subtle streaks behind.
+- NO gradient, NO plastic shine, NO decorative sparkles, NO extra stars around her.
+- Dreamer text tiny, hugs her crown.
+- At least 65% of the canvas is empty cream paper.`
+  },
+  {
+    id: 'pose-02-hold-question',
+    num: '02',
+    title: '举东西',
+    subtitle: 'hoisting a ?',
+    summary: '双臂 V 型高举一个大红色 `?`。不是被问倒——是主动把问题举起来。',
+    glyph: '`?` · 追问',
+    ratio: '3:4 竖版',
+    prompt: `Generate one standalone 3:4 vertical editorial illustration in the tradition of Tom Gauld and Christoph Niemann — one bold concept, massive white space, unified hand-drawn parallel-hatching pen-stroke language.
+
+Visual DNA:
+Warm off-white cream paper background (#fbf8f0). Around 55% empty paper (mostly the side regions). Confident hand-drawn warm-ink line work. Structural hatching only where volume/shadow makes sense. NO decorative elements, NO sparkles, NO patterns, NO shine.
+
+Recurring IP character (小星妍 · Xingyan):
+A small hand-drawn honey-yellow five-pointed star with gently rounded but clearly star-shaped points, drawn with a slight wobble and a playful upright stance leaning back a little from the effort of hoisting. Warm-black wobbly hand-drawn outline (#1a1614). Two tiny black dot eyes, slightly asymmetric, looking UP at the "?" she is raising. A tiny mouth mark is allowed — a short determined horizontal line — never a big cartoon grin. Thin black legs in a wide braced stance, feet planted apart, knees soft. TWO thin black arms extending outward and upward from her upper-left and upper-right star points, forming a wide V — both hands reaching up to hoist a large red "?" high above her head. Small hand marks at the end of each arm. 6-10 short parallel diagonal hatching strokes on her lower-right side for volume.
+
+Dreamer signature: directly above her head, tucked close to the crown but offset slightly LEFT so the raised "?" has room, a very SMALL handwritten "Dreamer" arcs gently in warm honey ink. Size ~1/9 her body height. Tight small curve, NOT a rainbow.
+
+Status glyph (above the Dreamer arc): a tiny hand-drawn "?" in honey-yellow outline only (no fill), floating just above the Dreamer arc on the LEFT side — her "追问" state. Size ~1/5 her body height. Simple hand-drawn question mark shape, NO decorations. This tiny honey "?" is CLEARLY smaller and distinct from the large red "?" she is hoisting above her head.
+
+Signature bottom-right: tiny handwritten "妍 ✦" in warm honey ink.
+
+Single visual concept:
+Xingyan stands in a braced stance and HOISTS a large red "?" above her head with both arms raised in a wide V — she is not confused by the question, she is offering it up on purpose. The red "?" is the answer to nothing yet, but she is choosing to hold it high.
+
+Composition (3:4 vertical):
+- Upper 40% of canvas: mostly empty cream paper, with a LARGE hand-drawn red "?" floating in the upper-center area, drawn with warm hand-drawn wobble (not a font). Xingyan's two raised arms curve up from the middle band and hold this red "?" from below on either side.
+- Middle band (~40% of canvas): Xingyan in her braced stance, centered horizontally. Small honey crown perched on her top point. Dreamer arc + tiny honey "?" glyph tucked to the upper-LEFT of the crown so the big red "?" above has clear space.
+- Lower 20% of canvas: mostly empty cream paper. A small ground shadow line of 5-6 short parallel hatching strokes under her feet.
+
+No Chinese labels in this image — the pose + the "?" speak alone.
+
+Hatching language (unified):
+Warm-black short parallel diagonal strokes at ~45° down-right, three places only: (1) lower-right of Xingyan's body (6-10 strokes), (2) inside curve of the large red "?" for weight (4-6 strokes, still in warm-black, NOT red), (3) ground shadow line under her feet (5-6 strokes). NO hatching in the empty upper or side areas.
+
+Color use (strict):
+- Paper: warm cream (#fbf8f0).
+- Honey-yellow ONLY on Xingyan's body, the small crown on her head, the tiny "Dreamer" arc, and the tiny "?" status glyph outline above her head.
+- Red (#E43C31) ONLY for the LARGE hand-drawn "?" she is hoisting overhead — this is the only red in the scene.
+- Warm-black ink for: Xingyan's outline, eyes, mouth mark, arms, hand marks, legs, feet, all hatching (including on the red "?"), the ground shadow.
+- No blue, no orange in this scene.
+
+Anti-slop constraints:
+- Both arms form a wide V — they do NOT wrap around or enclose the crown; the top of her head stays visually clear.
+- The large red "?" is CLEARLY larger than the tiny honey "?" status glyph above her Dreamer arc; the two are visually distinct.
+- The star has FIVE gently rounded points, not six, not rounded into a puffy shape.
+- NO gradient, NO plastic shine, NO decorative sparkles, NO extra stars.
+- Dreamer text tiny, hugs her crown, offset slightly to the left of the raised "?".
+- At least 55% of the canvas is empty cream paper.`
+  },
+  {
+    id: 'pose-03-point',
+    num: '03',
+    title: '指',
+    subtitle: 'pointing',
+    summary: '转身用一只尖角当箭头，手臂横穿画面明确指向右侧一个红色小目标。决断感。',
+    glyph: '放大镜 · 观察 / 审视',
+    ratio: '3:4 竖版',
+    prompt: `Generate one standalone 3:4 vertical editorial illustration in the tradition of Tom Gauld and Christoph Niemann — one bold concept, massive white space, unified hand-drawn parallel-hatching pen-stroke language.
+
+Visual DNA:
+Warm off-white cream paper background (#fbf8f0). Around 60% empty paper (mostly the upper region and the left side). Confident hand-drawn warm-ink line work. Structural hatching only where volume/shadow makes sense. NO decorative elements, NO sparkles, NO patterns, NO shine.
+
+Recurring IP character (小星妍 · Xingyan):
+A small hand-drawn honey-yellow five-pointed star with gently rounded but clearly star-shaped points, drawn with a slight wobble. She is turned slightly to face RIGHT — her body angled so her upper-right star point becomes an arrow. Warm-black wobbly hand-drawn outline (#1a1614). Two tiny black dot eyes, slightly asymmetric, BOTH shifted to the right side of her face (looking in the direction she points). A tiny mouth mark is allowed — a short determined line — never a big cartoon grin. Thin black legs in a mid-stride pose: one planted, the other slightly forward as if she just stepped into position. One thin black arm extends from her upper-right side point straight out to the right in a clear pointing gesture, with a tiny finger-tip mark at the end. 6-10 short parallel diagonal hatching strokes on her lower-right side for volume.
+
+Dreamer signature: directly above her head, tucked close to the crown, a very SMALL handwritten "Dreamer" arcs gently in warm honey ink. Size ~1/9 her body height. Tight small curve, NOT a rainbow.
+
+Status glyph (above the Dreamer arc): a tiny hand-drawn MAGNIFYING GLASS in honey-yellow outline only (no fill) — a small circle with a short handle — floating just above the Dreamer arc — her "observing / examining" state as she directs attention. Size ~1/5 her body height. NO decorations, NO sparkles, NO fill inside the lens.
+
+Signature bottom-right: tiny handwritten "妍 ✦" in warm honey ink.
+
+Single visual concept:
+Xingyan stands in the left-center of the canvas and clearly POINTS to something on the far right. Her whole body is angled toward the target — eyes shifted right, one leg stepped forward, one thin arm extended straight to the right. At the end of her pointing arm, a small red target dot (with a soft red halo ring around it) sits alone in the empty right side of the canvas — the "thing worth looking at".
+
+Composition (3:4 vertical):
+- Upper 40% of canvas: empty cream paper. Only the tiny Dreamer arc + tiny honey magnifying-glass glyph appear here, hugging the top of her crown.
+- Middle band (~40% of canvas): Xingyan positioned in the LEFT-CENTER of the canvas, body angled right, extended arm reaching across the middle toward the right edge. Small honey crown perched on her top point. At the far right end of her arm, a small solid red dot (~4-6 px feel) with a thin red concentric ring around it — the target she points to.
+- Lower 20% of canvas: mostly empty cream paper. A small ground shadow line of 5-6 short parallel hatching strokes under her feet.
+
+No Chinese labels in this image — the pointing gesture speaks alone.
+
+Hatching language (unified):
+Warm-black short parallel diagonal strokes at ~45° down-right, three places only: (1) lower-right of Xingyan's body (6-10 strokes), (2) a couple of short strokes along the shadow side of her extended arm for weight (2-3 strokes), (3) ground shadow line under her feet (5-6 strokes). NO hatching in the empty upper or right areas.
+
+Color use (strict):
+- Paper: warm cream (#fbf8f0).
+- Honey-yellow ONLY on Xingyan's body, the small crown on her head, the tiny "Dreamer" arc, and the tiny magnifying-glass status glyph outline above her head.
+- Red (#E43C31) ONLY for the small target dot and its thin concentric ring at the right end of her pointing arm — this is the only red in the scene.
+- Warm-black ink for: Xingyan's outline, eyes, mouth mark, arm, finger-tip mark, legs, feet, all hatching, the ground shadow.
+- No blue, no orange in this scene.
+
+Anti-slop constraints:
+- Xingyan's eyes MUST be shifted to the right side of her face (both looking in the direction she points) — not centered, not looking forward at the viewer.
+- The pointing arm is a single confident line ending in a tiny finger-tip mark — NOT a hand with individual fingers.
+- The star has FIVE gently rounded points, not six.
+- NO speech bubble, NO exclamation mark, NO arrow between her and the target — only the arm, the target dot, and the halo ring.
+- NO gradient, NO plastic shine, NO decorative sparkles.
+- Dreamer text tiny, hugs her crown.
+- At least 60% of the canvas is empty cream paper.`
+  },
+  {
+    id: 'pose-04-side-by-side',
+    num: '04',
+    title: '并肩',
+    subtitle: 'side-by-side with AI blob',
+    summary: '星在左、AI blob 在右，同高、同重、同地面。两只手互相伸出打招呼——队友时代。',
+    glyph: '对话气泡 · 在协作中',
+    ratio: '3:4 竖版',
+    prompt: `Generate one standalone 3:4 vertical editorial illustration in the tradition of Tom Gauld and Christoph Niemann — one bold concept, massive white space, unified hand-drawn parallel-hatching pen-stroke language.
+
+Visual DNA:
+Warm off-white cream paper background (#fbf8f0). Around 55% empty paper (mostly the upper region and the outer margins). Confident hand-drawn warm-ink line work. Structural hatching only where volume/shadow makes sense. NO decorative elements, NO sparkles, NO patterns, NO shine.
+
+Recurring IP character (小星妍 · Xingyan):
+A small hand-drawn honey-yellow five-pointed star with gently rounded but clearly star-shaped points, drawn with a slight wobble and a subtle lean toward the AI creature on her right. Warm-black wobbly hand-drawn outline (#1a1614). Two tiny black dot eyes, slightly asymmetric, warm and looking toward the AI creature. A tiny mouth mark is allowed — a barely-there upward arc — never a big cartoon grin. Thin black legs in a relaxed bouncy stance, one slightly forward. One small thin arm from her upper-right side point extends outward toward the AI creature in a small greeting/waving gesture. 6-10 short parallel diagonal hatching strokes on her lower-right side for volume.
+
+Dreamer signature: directly above her head, tucked close to the crown, a very SMALL handwritten "Dreamer" arcs gently in warm honey ink. Size ~1/9 her body height. Tight small curve, NOT a rainbow.
+
+Status glyph (above the Dreamer arc): a tiny hand-drawn SPEECH BUBBLE in honey-yellow outline only (no fill), containing three small dots "..." inside — her "in active collaboration" state. Size ~1/5 her body height. Simple rounded bubble outline with a small tail pointing down toward her, NO decorations.
+
+Signature bottom-right: tiny handwritten "妍 ✦" in warm honey ink.
+
+Second character (small AI blob):
+A small hand-drawn AI creature stands to Xingyan's right at the SAME ground level and the SAME visual height as Xingyan (never taller, never bigger). Its body is a clearly ROUNDED BLOB shape — visibly NOT star-shaped, visibly NOT humanoid — drawn in warm-black outline only (no honey-yellow fill; honey is Xingyan's alone). On top of the blob, a small antenna line ending in a tiny black dot bobs playfully. On the front of the blob, a small rounded rectangular face-plate with two tiny black dot eyes echoing Xingyan's, plus a tiny mouth mark matching hers. Two short stubby legs beneath the blob, one thin arm extended toward Xingyan in a matching greeting/waving gesture. 3-5 short hatching strokes on the shadow side of its body, same angle as Xingyan's hatching.
+
+Single visual concept:
+Xingyan on the LEFT and the AI blob on the RIGHT stand side by side on the same ground line — same height, same weight of presence, both leaning slightly toward each other with matching greeting gestures. This is the "队友时代" — no hierarchy, no operator-and-tool, just two teammates showing up together.
+
+Composition (3:4 vertical):
+- Upper 45% of canvas: empty cream paper. Only Xingyan's tiny Dreamer arc + tiny honey speech-bubble glyph appear here, hugging the top of her crown. The AI blob has NO Dreamer arc (Dreamer signature belongs to Xingyan alone).
+- Middle band (~35% of canvas): the two characters side by side. Xingyan positioned center-left, AI blob positioned center-right, with a small comfortable gap between them. Their extended arms reach gently toward the middle but do not touch — the space between them is deliberate breath.
+- Lower 20% of canvas: mostly empty cream paper. A shared ground shadow line of 8-10 short parallel hatching strokes runs across the base under both characters.
+
+No Chinese labels in this image — the two figures side by side speak alone.
+
+Hatching language (unified):
+Warm-black short parallel diagonal strokes at ~45° down-right, three places only: (1) lower-right of Xingyan's body (6-10 strokes), (2) shadow side of the AI blob (3-5 strokes, same angle), (3) shared ground shadow line under both characters (8-10 strokes). NO hatching elsewhere.
+
+Color use (strict):
+- Paper: warm cream (#fbf8f0).
+- Honey-yellow ONLY on Xingyan's body, the small crown on her head, the tiny "Dreamer" arc, and the tiny speech-bubble status glyph outline above her head.
+- Warm-black ink for: Xingyan's outline, eyes, mouth mark, arm, legs, hatching; the entire AI blob (outline, antenna, face-plate, eyes, mouth mark, arm, legs, hatching); the shared ground shadow.
+- No red, no blue, no orange in this scene.
+
+Anti-slop constraints:
+- The AI blob is a clearly ROUNDED shape, visibly NOT star-shaped, visibly NOT humanoid.
+- The AI blob is at the SAME height as Xingyan — not taller, not shorter, not bigger, not smaller.
+- Only Xingyan has the crown, Dreamer arc, and honey status glyph. The AI blob has NONE of these — no crown, no arc, no glyph.
+- Honey-yellow appears ONLY on Xingyan's parts — never on the AI blob.
+- The star has FIVE gently rounded points, not six.
+- NO gradient, NO plastic shine, NO decorative sparkles, NO extra stars.
+- Dreamer text tiny, hugs Xingyan's crown.
+- At least 55% of the canvas is empty cream paper.`
+  }
+];
+
+// ---------------- RENDER: reference gallery ----------------
+const refGrid = document.getElementById('ref-grid');
+REFERENCES.forEach(r => {
+  const card = document.createElement('div');
+  card.className = 'ref-card';
+  card.innerHTML = `
+    <div class="ref-frame">
+      <img src="assets/${r.id}.png" alt="${r.title}"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='block';"/>
+      <div class="ref-placeholder" style="display:none;">
+        <div class="icon">✦</div>
+        <div>把图存到</div>
+        <code>assets/${r.id}.png</code>
+      </div>
+    </div>
+    <div class="ref-meta">
+      <div class="tag">${r.tag}</div>
+      <h3>${r.title}</h3>
+      <p>${r.caption}</p>
+      <p style="margin-top:6px;color:var(--honey-deep);font-style:italic;">头顶符号：${r.glyph}</p>
+    </div>
+  `;
+  refGrid.appendChild(card);
+});
+
+// force check for missing images (onerror doesn't always fire for cached 404s)
+setTimeout(() => {
+  document.querySelectorAll('.ref-frame img, .pose-image img').forEach(img => {
+    if (!img.complete || img.naturalWidth === 0) {
+      img.style.display = 'none';
+      const placeholder = img.nextElementSibling;
+      if (placeholder) placeholder.style.display = 'block';
+    }
+  });
+}, 200);
+
+// ---------------- RENDER: pose cards ----------------
+const poseList = document.getElementById('pose-list');
+POSES.forEach(p => {
+  const card = document.createElement('article');
+  card.className = 'pose-card';
+  card.id = p.id;
+  card.innerHTML = `
+    <div class="pose-image">
+      <img src="assets/${p.id}.png" alt="${p.title}"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='block';"/>
+      <div class="pose-placeholder" style="display:none;">
+        <div class="n">${p.num}</div>
+        <div>生成后存到</div>
+        <code style="font-family:Menlo,monospace;font-size:10px;background:rgba(0,0,0,.04);padding:2px 6px;border-radius:3px;display:inline-block;margin-top:6px;">assets/${p.id}.png</code>
+      </div>
+    </div>
+    <div class="pose-body">
+      <h3><span class="pose-num">${p.num}.</span>${p.title} <span style="font-size:14px;color:var(--ink-muted);font-style:italic;">· ${p.subtitle}</span></h3>
+      <div class="pose-summary">${p.summary}</div>
+      <div class="pose-attrs">
+        <div class="attr"><strong>头顶符号</strong><span class="glyph">${p.glyph}</span></div>
+        <div class="attr"><strong>尺寸</strong>${p.ratio}</div>
+        <div class="attr"><strong>Prompt 长度</strong>${p.prompt.split(/\s+/).length} 词</div>
+      </div>
+      <div class="prompt-block">
+        <div class="prompt-head">
+          <span class="prompt-label">Prompt · English · full</span>
+          <button class="prompt-copy" data-target="${p.id}">Copy</button>
+        </div>
+        <div class="prompt-body" id="prompt-${p.id}">${escapeHtml(p.prompt)}</div>
+      </div>
+    </div>
+  `;
+  poseList.appendChild(card);
+});
+
+function escapeHtml(s) {
+  return s.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+// ---------------- COPY-TO-CLIPBOARD ----------------
+const toast = document.getElementById('toast');
+function showToast(msg) {
+  toast.textContent = msg;
+  toast.classList.add('show');
+  clearTimeout(showToast._t);
+  showToast._t = setTimeout(() => toast.classList.remove('show'), 1800);
+}
+
+document.querySelectorAll('.prompt-copy').forEach(btn => {
+  btn.addEventListener('click', async () => {
+    const id = btn.dataset.target;
+    const pose = POSES.find(p => p.id === id);
+    if (!pose) return;
+    try {
+      await navigator.clipboard.writeText(pose.prompt);
+      btn.textContent = '✓ Copied';
+      btn.classList.add('copied');
+      showToast(`已复制 · ${pose.title} · ${pose.prompt.split(/\s+/).length} 词`);
+      setTimeout(() => {
+        btn.textContent = 'Copy';
+        btn.classList.remove('copied');
+      }, 1800);
+    } catch (e) {
+      showToast('复制失败：请手动选中');
+    }
+  });
+});
+
+// smooth scroll for TOC
+document.querySelectorAll('.toc a, [href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const href = a.getAttribute('href');
+    if (href && href.startsWith('#') && href.length > 1) {
+      const target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+  });
+});
+</script>
+
+</body>
+</html>

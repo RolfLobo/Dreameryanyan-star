@@ -1,0 +1,15 @@
+# macOS
+.DS_Store
+._*
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# OS junk
+Thumbs.db
+
+# Local drafts / renders
+*.png.tmp
+scratch/
