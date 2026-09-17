@@ -29,6 +29,10 @@ The dreamer-star-ip character, 小星妍, is a slightly tilted, honey-yellow fiv
 
 **Not intended for:** portrait-led covers, polished 3D commercial illustration, or presentation-style infographics and architecture diagrams.
 
+## References and Acknowledgements
+
+This project draws on Ian's open-source work in [Ian Xiaohei Illustrations](https://github.com/helloianneo/ian-xiaohei-illustrations), particularly its approach to extracting cognitive anchors from Chinese writing, building shot lists, and structuring editorial illustration workflows. Thank you to Ian for sharing the methodology.
+
 ## Project Structure
 
 ```text
@@ -101,7 +105,3 @@ You can also copy a prompt from [`examples/ai-era-product-interview-v6.2.md`](ex
 MIT. See [LICENSE](LICENSE).
 
 The dreamer-star-ip character, status-glyph system, and composition language are open for learning and remixing. Please provide attribution when using them commercially.
-
-## References and Acknowledgements
-
-This project draws on Ian's open-source work in [Ian Xiaohei Illustrations](https://github.com/helloianneo/ian-xiaohei-illustrations), particularly its approach to extracting cognitive anchors from Chinese writing, building shot lists, and structuring editorial illustration workflows. Thank you to Ian for sharing the methodology.

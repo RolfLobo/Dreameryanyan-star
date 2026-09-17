@@ -29,6 +29,10 @@
 
 **不适合**：真人封面（→ 用其它 skill）、3D 商业插画、PPT 信息图 / 架构图。
 
+## 参考与致谢
+
+本项目参考了 Ian 的 [Ian Xiaohei Illustrations](https://github.com/helloianneo/ian-xiaohei-illustrations) 在中文文章认知锚点提炼、shot list 和编辑插画工作流上的实践。感谢 Ian 对这套方法的开源分享。
+
 ## 目录结构
 
 ```
@@ -101,7 +105,3 @@ ln -s "$(pwd)" ~/.copilot/skills/dreamer-star-ip
 MIT — see [LICENSE](LICENSE).
 
 IP 视觉设计（小星妍形象、头顶状态符号系统、构图语法）欢迎学习和二创；如用于商业场景，请注明来源。
-
-## 参考与致谢
-
-本项目参考了 Ian 的 [Ian Xiaohei Illustrations](https://github.com/helloianneo/ian-xiaohei-illustrations) 在中文文章认知锚点提炼、shot list 和编辑插画工作流上的实践。感谢 Ian 对这套方法的开源分享。
