@@ -1,9 +1,9 @@
 ---
-name: dreamerstar
-description: 生成"小星妍 · DreamerStar"风格的编辑插画——蜂蜜黄五角星 IP + Tom Gauld × Christoph Niemann 风格的极简概念图。用于给中文文章、公众号、小红书、幻灯片、Notion 文档等生成 3:4 竖版或 4:3 横版正文配图；一张图一个概念 + 大量留白 + 3 处结构性排线 + 上下反差抓手。触发关键词：dreamerstar、Dreamer Star、小星妍、Dreamer 妍妍、星星 IP、蜂蜜黄小星、编辑插画、Tom Gauld、Christoph Niemann、正文配图、爆款封面、认知图解、极简手绘、AI 时代插画、5 角星角色。
+name: dreamer-star-ip
+description: 生成 "dreamer-star-ip" 风格的编辑插画——蜂蜜黄五角星 IP + Tom Gauld × Christoph Niemann 风格的极简概念图。用于给中文文章、公众号、小红书、幻灯片、Notion 文档等生成 3:4 竖版或 4:3 横版正文配图；一张图一个概念 + 大量留白 + 3 处结构性排线 + 上下反差抓手。触发关键词：dreamer-star-ip、小星妍、Dreamer 妍妍、星星 IP、蜂蜜黄小星、编辑插画、Tom Gauld、Christoph Niemann、正文配图、爆款封面、认知图解、极简手绘、AI 时代插画、5 角星角色。
 ---
 
-# DreamerStar · 小星妍编辑插画
+# dreamer-star-ip
 
 ## 核心定位
 

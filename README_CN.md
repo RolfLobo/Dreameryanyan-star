@@ -2,7 +2,7 @@
 
 [中文](README_CN.md) · [English](README.md)
 
-# ⭐ DreamerStar · 小星妍编辑插画
+# ⭐ dreamer-star-ip
 
 **蜂蜜黄五角星 IP × 极简概念性编辑插画。**
 
@@ -11,7 +11,7 @@
 [![许可证：MIT](https://img.shields.io/badge/许可证-MIT-2ea44f?style=flat-square)](LICENSE)
 ![版本](https://img.shields.io/badge/版本-6.2-2ea44f?style=flat-square)
 ![示例](https://img.shields.io/badge/示例-9-2ea44f?style=flat-square)
-[![GitHub Stars](https://img.shields.io/github/stars/yanliudesign/Dreameryanyan-star?style=flat-square&label=STARS&color=f97316)](https://github.com/yanliudesign/Dreameryanyan-star/stargazers)
+[![GitHub Stars](https://img.shields.io/github/stars/yanliudesign/dreamer-star-ip?style=flat-square&label=STARS&color=f97316)](https://github.com/yanliudesign/dreamer-star-ip/stargazers)
 
 ![Claude Code Skill](https://img.shields.io/badge/Claude_Code-Skill-d97757?style=flat-square&logo=anthropic&logoColor=white)
 ![Codex Skill](https://img.shields.io/badge/Codex-Skill-22c55e?style=flat-square&logo=openai&logoColor=white)
@@ -32,7 +32,7 @@
 ## 目录结构
 
 ```
-dreamerstar/
+dreamer-star-ip/
 ├── SKILL.md                        ← 入口：核心定位 + 5 步工作流
 ├── references/
 │   ├── style-dna.md                风格 DNA · 颜色 · 留白率 · 排线语言
@@ -55,13 +55,13 @@ dreamerstar/
 
 ```bash
 # Claude 全局
-ln -s "$(pwd)" ~/.claude/skills/dreamerstar
+ln -s "$(pwd)" ~/.claude/skills/dreamer-star-ip
 
 # 或 Copilot 全局
-ln -s "$(pwd)" ~/.copilot/skills/dreamerstar
+ln -s "$(pwd)" ~/.copilot/skills/dreamer-star-ip
 ```
 
-之后在新对话里说：「用小星妍风格给我这篇文章配图」/「dreamerstar 生成一个思考的 pose」，就会自动触发。
+之后在新对话里说：「用小星妍风格给我这篇文章配图」/「dreamer-star-ip 生成一个思考的 pose」，就会自动触发。
 
 ### 手动用作 prompt 库
 
@@ -71,19 +71,19 @@ ln -s "$(pwd)" ~/.copilot/skills/dreamerstar
 
 <table>
     <tr>
-        <td><img src="example/71ceb6fd-f2c3-42c4-b419-3e87dc9a2bce.jpeg" width="240" height="320" alt="DreamerStar 示例 1"></td>
-        <td><img src="example/Gemini_Generated_Image_7yx70x7yx70x7yx7.png" width="240" height="320" alt="DreamerStar 示例 2"></td>
-        <td><img src="example/Gemini_Generated_Image_c2j3vhc2j3vhc2j3.png" width="240" height="320" alt="DreamerStar 示例 3"></td>
+        <td><img src="example/71ceb6fd-f2c3-42c4-b419-3e87dc9a2bce.jpeg" width="240" height="320" alt="dreamer-star-ip 示例 1"></td>
+        <td><img src="example/Gemini_Generated_Image_7yx70x7yx70x7yx7.png" width="240" height="320" alt="dreamer-star-ip 示例 2"></td>
+        <td><img src="example/Gemini_Generated_Image_c2j3vhc2j3vhc2j3.png" width="240" height="320" alt="dreamer-star-ip 示例 3"></td>
     </tr>
     <tr>
-        <td><img src="example/Gemini_Generated_Image_r5nht8r5nht8r5nh.png" width="240" height="320" alt="DreamerStar 示例 4"></td>
-        <td><img src="example/Screenshot%202026-07-18%20at%204.07.25%E2%80%AFPM.png" width="240" height="320" alt="DreamerStar 示例 5"></td>
-        <td><img src="example/Gemini_Generated_Image_w368oyw368oyw368.png" width="240" height="320" alt="DreamerStar 示例 6"></td>
+        <td><img src="example/Gemini_Generated_Image_r5nht8r5nht8r5nh.png" width="240" height="320" alt="dreamer-star-ip 示例 4"></td>
+        <td><img src="example/Screenshot%202026-07-18%20at%204.07.25%E2%80%AFPM.png" width="240" height="320" alt="dreamer-star-ip 示例 5"></td>
+        <td><img src="example/Gemini_Generated_Image_w368oyw368oyw368.png" width="240" height="320" alt="dreamer-star-ip 示例 6"></td>
     </tr>
     <tr>
-        <td><img src="example/be47bbf4-6d72-4e60-91fb-be46e41d7380.jpeg" width="240" height="320" alt="DreamerStar 示例 7"></td>
-        <td><img src="example/c29d3e5a-ec58-48a1-a1b1-9c5dad9d6762.jpeg" width="240" height="320" alt="DreamerStar 示例 8"></td>
-        <td><img src="example/e66317aa-5aff-4fed-a55a-6fa4eab4938e.jpeg" width="240" height="320" alt="DreamerStar 示例 9"></td>
+        <td><img src="example/be47bbf4-6d72-4e60-91fb-be46e41d7380.jpeg" width="240" height="320" alt="dreamer-star-ip 示例 7"></td>
+        <td><img src="example/c29d3e5a-ec58-48a1-a1b1-9c5dad9d6762.jpeg" width="240" height="320" alt="dreamer-star-ip 示例 8"></td>
+        <td><img src="example/e66317aa-5aff-4fed-a55a-6fa4eab4938e.jpeg" width="240" height="320" alt="dreamer-star-ip 示例 9"></td>
     </tr>
 </table>
 

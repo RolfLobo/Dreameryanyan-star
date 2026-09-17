@@ -2,7 +2,7 @@
 
 [English](README.md) · [中文](README_CN.md)
 
-# ⭐ DreamerStar Editorial Illustration
+# ⭐ dreamer-star-ip
 
 **A honey-yellow star character meets minimalist conceptual illustration inspired by editorial cartooning.**
 
@@ -11,7 +11,7 @@ One image = one idea + generous negative space + three structural hatching areas
 [![License: MIT](https://img.shields.io/badge/LICENSE-MIT-2ea44f?style=flat-square)](LICENSE)
 ![Version](https://img.shields.io/badge/VERSION-6.2-2ea44f?style=flat-square)
 ![Examples](https://img.shields.io/badge/EXAMPLES-9-2ea44f?style=flat-square)
-[![GitHub Stars](https://img.shields.io/github/stars/yanliudesign/Dreameryanyan-star?style=flat-square&label=STARS&color=f97316)](https://github.com/yanliudesign/Dreameryanyan-star/stargazers)
+[![GitHub Stars](https://img.shields.io/github/stars/yanliudesign/dreamer-star-ip?style=flat-square&label=STARS&color=f97316)](https://github.com/yanliudesign/dreamer-star-ip/stargazers)
 
 ![Claude Code Skill](https://img.shields.io/badge/Claude_Code-Skill-d97757?style=flat-square&logo=anthropic&logoColor=white)
 ![Codex Skill](https://img.shields.io/badge/Codex-Skill-22c55e?style=flat-square&logo=openai&logoColor=white)
@@ -23,7 +23,7 @@ One image = one idea + generous negative space + three structural hatching areas
 
 ## What It Is
 
-DreamerStar (小星妍) is a slightly tilted, honey-yellow five-pointed star. She has a small curved "Dreamer" wordmark close above her head, hand-drawn hatching on one lower side, and a contextual status glyph such as a light bulb, `?`, crown, cloud, lightning bolt, spark, or speech bubble. She must take part in the image's central action and never appear as decoration.
+The dreamer-star-ip character, 小星妍, is a slightly tilted, honey-yellow five-pointed star. She has a small curved "Dreamer" wordmark close above her head, hand-drawn hatching on one lower side, and a contextual status glyph such as a light bulb, `?`, crown, cloud, lightning bolt, spark, or speech bubble. She must take part in the image's central action and never appear as decoration.
 
 **Best for:** editorial illustrations for Chinese articles, Xiaohongshu posts, presentations, Notion documents, and social media covers. The primary format is 3:4 portrait, with 4:3 and 1:1 also supported.
 
@@ -32,7 +32,7 @@ DreamerStar (小星妍) is a slightly tilted, honey-yellow five-pointed star. Sh
 ## Project Structure
 
 ```text
-dreamerstar/
+dreamer-star-ip/
 ├── SKILL.md                        Main entry: positioning and five-step workflow
 ├── references/
 │   ├── style-dna.md                Visual DNA, color, negative space, and hatching
@@ -55,13 +55,13 @@ dreamerstar/
 
 ```bash
 # Claude global skill
-ln -s "$(pwd)" ~/.claude/skills/dreamerstar
+ln -s "$(pwd)" ~/.claude/skills/dreamer-star-ip
 
 # Or Copilot global skill
-ln -s "$(pwd)" ~/.copilot/skills/dreamerstar
+ln -s "$(pwd)" ~/.copilot/skills/dreamer-star-ip
 ```
 
-Then start a new conversation and say: `Use DreamerStar to illustrate this article` or `Generate a thinking pose with DreamerStar`.
+Then start a new conversation and say: `Use dreamer-star-ip to illustrate this article` or `Generate a thinking pose with dreamer-star-ip`.
 
 ### Use as a prompt library
 
@@ -71,19 +71,19 @@ You can also copy a prompt from [`examples/ai-era-product-interview-v6.2.md`](ex
 
 <table>
     <tr>
-        <td><img src="example/71ceb6fd-f2c3-42c4-b419-3e87dc9a2bce.jpeg" width="240" height="320" alt="DreamerStar example 1"></td>
-        <td><img src="example/Gemini_Generated_Image_7yx70x7yx70x7yx7.png" width="240" height="320" alt="DreamerStar example 2"></td>
-        <td><img src="example/Gemini_Generated_Image_c2j3vhc2j3vhc2j3.png" width="240" height="320" alt="DreamerStar example 3"></td>
+        <td><img src="example/71ceb6fd-f2c3-42c4-b419-3e87dc9a2bce.jpeg" width="240" height="320" alt="dreamer-star-ip example 1"></td>
+        <td><img src="example/Gemini_Generated_Image_7yx70x7yx70x7yx7.png" width="240" height="320" alt="dreamer-star-ip example 2"></td>
+        <td><img src="example/Gemini_Generated_Image_c2j3vhc2j3vhc2j3.png" width="240" height="320" alt="dreamer-star-ip example 3"></td>
     </tr>
     <tr>
-        <td><img src="example/Gemini_Generated_Image_r5nht8r5nht8r5nh.png" width="240" height="320" alt="DreamerStar example 4"></td>
-        <td><img src="example/Screenshot%202026-07-18%20at%204.07.25%E2%80%AFPM.png" width="240" height="320" alt="DreamerStar example 5"></td>
-        <td><img src="example/Gemini_Generated_Image_w368oyw368oyw368.png" width="240" height="320" alt="DreamerStar example 6"></td>
+        <td><img src="example/Gemini_Generated_Image_r5nht8r5nht8r5nh.png" width="240" height="320" alt="dreamer-star-ip example 4"></td>
+        <td><img src="example/Screenshot%202026-07-18%20at%204.07.25%E2%80%AFPM.png" width="240" height="320" alt="dreamer-star-ip example 5"></td>
+        <td><img src="example/Gemini_Generated_Image_w368oyw368oyw368.png" width="240" height="320" alt="dreamer-star-ip example 6"></td>
     </tr>
     <tr>
-        <td><img src="example/be47bbf4-6d72-4e60-91fb-be46e41d7380.jpeg" width="240" height="320" alt="DreamerStar example 7"></td>
-        <td><img src="example/c29d3e5a-ec58-48a1-a1b1-9c5dad9d6762.jpeg" width="240" height="320" alt="DreamerStar example 8"></td>
-        <td><img src="example/e66317aa-5aff-4fed-a55a-6fa4eab4938e.jpeg" width="240" height="320" alt="DreamerStar example 9"></td>
+        <td><img src="example/be47bbf4-6d72-4e60-91fb-be46e41d7380.jpeg" width="240" height="320" alt="dreamer-star-ip example 7"></td>
+        <td><img src="example/c29d3e5a-ec58-48a1-a1b1-9c5dad9d6762.jpeg" width="240" height="320" alt="dreamer-star-ip example 8"></td>
+        <td><img src="example/e66317aa-5aff-4fed-a55a-6fa4eab4938e.jpeg" width="240" height="320" alt="dreamer-star-ip example 9"></td>
     </tr>
 </table>
 
@@ -100,7 +100,7 @@ You can also copy a prompt from [`examples/ai-era-product-interview-v6.2.md`](ex
 
 MIT. See [LICENSE](LICENSE).
 
-The DreamerStar character, status-glyph system, and composition language are open for learning and remixing. Please provide attribution when using them commercially.
+The dreamer-star-ip character, status-glyph system, and composition language are open for learning and remixing. Please provide attribution when using them commercially.
 
 ## References and Acknowledgements
 
