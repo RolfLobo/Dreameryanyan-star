@@ -1,5 +1,7 @@
 # DreamerStar · 小星妍编辑插画 Skill
 
+[中文](README.md) | [English](README_EN.md)
+
 一个 Claude / Copilot skill，用于生成 **"小星妍 · DreamerStar"** 风格的中文正文配图。
 
 > 蜂蜜黄五角星 IP × Tom Gauld / Christoph Niemann 风格的极简概念插画。
