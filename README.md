@@ -70,17 +70,16 @@ dreamer-star-ip/
 
 ## Usage
 
-### Install as a Claude Code or Copilot skill
+### Install as a Codex skill
 
 ```bash
-# Claude global skill
-ln -s "$(pwd)" ~/.claude/skills/dreamer-star-ip
-
-# Or Copilot global skill
-ln -s "$(pwd)" ~/.copilot/skills/dreamer-star-ip
+# Global Codex skill (defaults to ~/.codex/skills)
+CODEX_HOME="${CODEX_HOME:-$HOME/.codex}"
+mkdir -p "$CODEX_HOME/skills"
+ln -s "$(pwd)" "$CODEX_HOME/skills/dreamer-star-ip"
 ```
 
-Then start a new conversation and say: `Use dreamer-star-ip to illustrate this article` or `Generate a thinking pose with dreamer-star-ip`.
+Then start a new Codex conversation and say: `Use dreamer-star-ip to illustrate this article` or `Generate a thinking pose with dreamer-star-ip`.
 
 ### Use as a prompt library
 

@@ -70,17 +70,16 @@ dreamer-star-ip/
 
 ## 怎么用
 
-### 装成 Claude Code / Copilot skill
+### 装成 Codex skill
 
 ```bash
-# Claude 全局
-ln -s "$(pwd)" ~/.claude/skills/dreamer-star-ip
-
-# 或 Copilot 全局
-ln -s "$(pwd)" ~/.copilot/skills/dreamer-star-ip
+# Codex 全局（默认安装到 ~/.codex/skills）
+CODEX_HOME="${CODEX_HOME:-$HOME/.codex}"
+mkdir -p "$CODEX_HOME/skills"
+ln -s "$(pwd)" "$CODEX_HOME/skills/dreamer-star-ip"
 ```
 
-之后在新对话里说：「用小星妍风格给我这篇文章配图」/「dreamer-star-ip 生成一个思考的 pose」，就会自动触发。
+之后在 Codex 新对话里说：「用小星妍风格给我这篇文章配图」/「dreamer-star-ip 生成一个思考的 pose」，就会自动触发。
 
 ### 手动用作 prompt 库
 
