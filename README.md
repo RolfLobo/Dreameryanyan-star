@@ -25,6 +25,7 @@ dreamerstar/
 │   ├── composition-patterns.md     构图哲学 · 反差抓手 · 尺寸规则
 │   ├── prompt-template.md          单张图 8 段式英文 prompt 模板
 │   └── qa-checklist.md             生成后 QA 清单 + 反 slop 规则
+├── example/                        9 张成品图 · README 九宫格展示
 └── examples/
     ├── ai-era-product-interview-v6.2.md   7 张 v6.2 实例（含跳跃收尾图）
     ├── six-vertical-illustrations.md      早期 6 张
@@ -49,6 +50,26 @@ ln -s "$(pwd)" ~/.copilot/skills/dreamerstar
 ### 手动用作 prompt 库
 
 不装成 skill 也行 —— 直接抄 [`examples/ai-era-product-interview-v6.2.md`](examples/ai-era-product-interview-v6.2.md) 里的 prompt 喂给你的图像模型（GPT-image / Nano Banana / Midjourney）。
+
+## 示例
+
+<table>
+    <tr>
+        <td><img src="example/71ceb6fd-f2c3-42c4-b419-3e87dc9a2bce.jpeg" width="240" height="320" alt="DreamerStar 示例 1"></td>
+        <td><img src="example/Gemini_Generated_Image_7yx70x7yx70x7yx7.png" width="240" height="320" alt="DreamerStar 示例 2"></td>
+        <td><img src="example/Gemini_Generated_Image_c2j3vhc2j3vhc2j3.png" width="240" height="320" alt="DreamerStar 示例 3"></td>
+    </tr>
+    <tr>
+        <td><img src="example/Gemini_Generated_Image_r5nht8r5nht8r5nh.png" width="240" height="320" alt="DreamerStar 示例 4"></td>
+        <td><img src="example/Gemini_Generated_Image_w368oyw368oyw368.png" width="240" height="320" alt="DreamerStar 示例 5"></td>
+        <td><img src="example/Screenshot%202026-07-18%20at%204.07.25%E2%80%AFPM.png" width="240" height="320" alt="DreamerStar 示例 6"></td>
+    </tr>
+    <tr>
+        <td><img src="example/be47bbf4-6d72-4e60-91fb-be46e41d7380.jpeg" width="240" height="320" alt="DreamerStar 示例 7"></td>
+        <td><img src="example/c29d3e5a-ec58-48a1-a1b1-9c5dad9d6762.jpeg" width="240" height="320" alt="DreamerStar 示例 8"></td>
+        <td><img src="example/e66317aa-5aff-4fed-a55a-6fa4eab4938e.jpeg" width="240" height="320" alt="DreamerStar 示例 9"></td>
+    </tr>
+</table>
 
 ## 核心哲学
 
