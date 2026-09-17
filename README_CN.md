@@ -1,11 +1,25 @@
-# DreamerStar · 小星妍编辑插画 Skill
+<div align="center">
 
-[中文](README_CN.md) | [English](README.md)
+[中文](README_CN.md) · [English](README.md)
 
-一个 Claude / Copilot skill，用于生成 **"小星妍 · DreamerStar"** 风格的中文正文配图。
+# ⭐ DreamerStar · 小星妍编辑插画
 
-> 蜂蜜黄五角星 IP × Tom Gauld / Christoph Niemann 风格的极简概念插画。
-> 一张图 = 一个概念 + 大量留白 + 3 处结构性排线 + 反差抓手。
+**蜂蜜黄五角星 IP × 极简概念性编辑插画。**
+
+一张图 = 一个概念 + 大量留白 + 3 处结构性排线 + 反差抓手。
+
+[![许可证：MIT](https://img.shields.io/badge/许可证-MIT-2ea44f?style=flat-square)](LICENSE)
+![版本](https://img.shields.io/badge/版本-6.2-2ea44f?style=flat-square)
+![示例](https://img.shields.io/badge/示例-9-2ea44f?style=flat-square)
+[![GitHub Stars](https://img.shields.io/github/stars/yanliudesign/Dreameryanyan-star?style=flat-square&label=STARS&color=f97316)](https://github.com/yanliudesign/Dreameryanyan-star/stargazers)
+
+![Claude Code Skill](https://img.shields.io/badge/Claude_Code-Skill-d97757?style=flat-square&logo=anthropic&logoColor=white)
+![Codex Skill](https://img.shields.io/badge/Codex-Skill-22c55e?style=flat-square&logo=openai&logoColor=white)
+![OpenCode Skill](https://img.shields.io/badge/OpenCode-Skill-3b82f6?style=flat-square)
+![OpenClaw Skill](https://img.shields.io/badge/OpenClaw-Skill-8b5cf6?style=flat-square)
+![Hermes Skill](https://img.shields.io/badge/Hermes-Skill-ec6f9e?style=flat-square)
+
+</div>
 
 ## 是什么
 

@@ -1,11 +1,25 @@
-# DreamerStar Editorial Illustration Skill
+<div align="center">
 
-[English](README.md) | [中文](README_CN.md)
+[English](README.md) · [中文](README_CN.md)
 
-A Claude / Copilot skill for creating editorial illustrations in the **DreamerStar (小星妍)** visual language.
+# ⭐ DreamerStar Editorial Illustration
 
-> A honey-yellow star character meets minimalist conceptual illustration inspired by editorial cartooning.
-> One image = one idea + generous negative space + three structural hatching areas + a visual contrast hook.
+**A honey-yellow star character meets minimalist conceptual illustration inspired by editorial cartooning.**
+
+One image = one idea + generous negative space + three structural hatching areas + a visual contrast hook.
+
+[![License: MIT](https://img.shields.io/badge/LICENSE-MIT-2ea44f?style=flat-square)](LICENSE)
+![Version](https://img.shields.io/badge/VERSION-6.2-2ea44f?style=flat-square)
+![Examples](https://img.shields.io/badge/EXAMPLES-9-2ea44f?style=flat-square)
+[![GitHub Stars](https://img.shields.io/github/stars/yanliudesign/Dreameryanyan-star?style=flat-square&label=STARS&color=f97316)](https://github.com/yanliudesign/Dreameryanyan-star/stargazers)
+
+![Claude Code Skill](https://img.shields.io/badge/Claude_Code-Skill-d97757?style=flat-square&logo=anthropic&logoColor=white)
+![Codex Skill](https://img.shields.io/badge/Codex-Skill-22c55e?style=flat-square&logo=openai&logoColor=white)
+![OpenCode Skill](https://img.shields.io/badge/OpenCode-Skill-3b82f6?style=flat-square)
+![OpenClaw Skill](https://img.shields.io/badge/OpenClaw-Skill-8b5cf6?style=flat-square)
+![Hermes Skill](https://img.shields.io/badge/Hermes-Skill-ec6f9e?style=flat-square)
+
+</div>
 
 ## What It Is
 
