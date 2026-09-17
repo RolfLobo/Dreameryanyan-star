@@ -33,6 +33,20 @@
 
 本项目参考了 Ian 的 [Ian Xiaohei Illustrations](https://github.com/helloianneo/ian-xiaohei-illustrations) 在中文文章认知锚点提炼、shot list 和编辑插画工作流上的实践。感谢 Ian 对这套方法的开源分享。
 
+第三方来源与许可证信息见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
+
+## 在原方法上增加了什么
+
+Ian Xiaohei Illustrations 提供了一套把中文文章转成概念性编辑插画的通用工作流。dreamer-star-ip 在此基础上继续发展成强调系列一致性的角色 IP 系统：
+
+- 完整角色规范：形态、性格、姿态、签名、配角关系与常见崩坏都有明确约束。
+- 由 5 个意图族群、16 个状态符号组成的动态表达词典，用来说明角色此刻在想什么。
+- 面向 3:4、4:3、1:1 的量化构图规则，包括留白率、反差轴、标签上限和排线位置。
+- 用于跨主题、跨图像模型保持视觉身份的 12 区块 Prompt 结构。
+- P0/P1/P2 分级质量控制，明确何时重画、局部修改或接受轻微偏差。
+
+这个项目不是 Ian 通用配图工具的替代品，而是把一个原创角色系统做得更可复用、可检查、可扩展。
+
 ## 目录结构
 
 ```
@@ -41,11 +55,12 @@ dreamer-star-ip/
 ├── references/
 │   ├── style-dna.md                风格 DNA · 颜色 · 留白率 · 排线语言
 │   ├── xiaoxingyan-ip.md           小星妍 IP 完整规格：形态 / 姿态库 / 禁忌
-│   ├── status-glyphs.md            15 个头顶状态符号 · 5 个族群 · 挑选规则
+│   ├── status-glyphs.md            16 个头顶状态符号 · 5 个族群 · 挑选规则
 │   ├── composition-patterns.md     构图哲学 · 反差抓手 · 尺寸规则
-│   ├── prompt-template.md          单张图 8 段式英文 prompt 模板
+│   ├── prompt-template.md          单张图 12 区块英文 prompt 模板
 │   └── qa-checklist.md             生成后 QA 清单 + 反 slop 规则
 ├── example/                        9 张成品图 · README 九宫格展示
+├── THIRD_PARTY_NOTICES.md          上游来源与许可证声明
 └── examples/
     ├── ai-era-product-interview-v6.2.md   7 张 v6.2 实例（含跳跃收尾图）
     ├── six-vertical-illustrations.md      早期 6 张

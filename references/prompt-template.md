@@ -1,11 +1,11 @@
-# 单图 Prompt 模板 · 8 段式
+# 单图 Prompt 模板 · 12 区块
 
-**所有小星妍风格图都用这个 8 段结构写英文 prompt。** 顺序不能乱——是模型解析的层级。
+**所有小星妍风格图都用这 12 个区块写英文 prompt。** 顺序不能乱，因为稳定的层级能减少模型漏读关键约束。
 
 ## 完整模板
 
 ```text
-Generate one standalone [ASPECT RATIO] editorial illustration in the tradition of Tom Gauld and Christoph Niemann — one bold concept, massive white space, unified hand-drawn parallel-hatching pen-stroke language.
+Generate one standalone [ASPECT RATIO] minimalist newspaper-style editorial illustration — one bold conceptual metaphor, massive white space, restrained warm-ink line work, and unified hand-drawn parallel hatching.
 
 Visual DNA:
 [PAPER COLOR + HEX]. Around [X]% empty paper (mostly [WHERE]). Confident hand-drawn warm-ink line work. Structural hatching only where volume/shadow makes sense. NO decorative elements, NO sparkles, NO patterns, NO shine.
@@ -55,7 +55,7 @@ Anti-slop constraints:
 
 | 段 | 作用 | 常见坑 |
 |---|---|---|
-| 1. Opener | 定框架：编辑插画 + 对标名 + 尺寸 + 手绘语言 | 别忘对标名 Tom Gauld × Niemann |
+| 1. Opener | 定框架：编辑插画 + 尺寸 + 概念隐喻 + 手绘语言 | 不要依赖艺术家姓名，直接描述可观察的视觉特征 |
 | 2. Visual DNA | 定纸底 + 留白率 + 无装饰基调 | 留白率必须写数字（模型对模糊描述不敏感） |
 | 3. Recurring IP character | 定小星妍完整规格 | 姿态动词必须具体（不能只写"lively"） |
 | 4. Dreamer signature | 定静态签名 | 一定要写"tight small curve, NOT a rainbow" |

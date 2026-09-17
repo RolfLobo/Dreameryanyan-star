@@ -2,7 +2,7 @@
 
 > 用于图片模型生成的独立姿态图，锁死 IP 一致性。
 >
-> **规格**：3:4 竖版 · cream 纸底 (#fbf8f0) · Tom Gauld × Christoph Niemann · 一张一姿态
+> **规格**：3:4 竖版 · cream 纸底 (#fbf8f0) · 极简报刊编辑插画 · 一张一姿态
 > **对齐**：跟 `examples/six-vertical-illustrations.md` 里 6 张的角色形象完全一致
 
 保存文件名：
@@ -22,7 +22,7 @@
 **头顶符号**：小灯泡（灵感刚被点亮 → 兴奋跳起来）
 
 ```text
-Generate one standalone 3:4 vertical editorial illustration in the tradition of Tom Gauld and Christoph Niemann — one bold concept, massive white space, unified hand-drawn parallel-hatching pen-stroke language.
+Generate one standalone 3:4 vertical minimalist newspaper-style editorial illustration — one bold conceptual metaphor, massive white space, restrained warm-ink line work, and unified hand-drawn parallel hatching.
 
 Visual DNA:
 Warm off-white cream paper background (#fbf8f0). Around 65% empty paper (mostly the upper and side regions). Confident hand-drawn warm-ink line work. Structural hatching only where volume/shadow makes sense. NO decorative elements, NO sparkles, NO patterns, NO shine.
@@ -73,7 +73,7 @@ Anti-slop constraints:
 **头顶符号**：小 `?`（追问、走向未知）
 
 ```text
-Generate one standalone 3:4 vertical editorial illustration in the tradition of Tom Gauld and Christoph Niemann — one bold concept, massive white space, unified hand-drawn parallel-hatching pen-stroke language.
+Generate one standalone 3:4 vertical minimalist newspaper-style editorial illustration — one bold conceptual metaphor, massive white space, restrained warm-ink line work, and unified hand-drawn parallel hatching.
 
 Visual DNA:
 Warm off-white cream paper background (#fbf8f0). Around 55% empty paper (mostly the side regions). Confident hand-drawn warm-ink line work. Structural hatching only where volume/shadow makes sense. NO decorative elements, NO sparkles, NO patterns, NO shine.
@@ -124,7 +124,7 @@ Anti-slop constraints:
 **头顶符号**：小放大镜（观察、审视）
 
 ```text
-Generate one standalone 3:4 vertical editorial illustration in the tradition of Tom Gauld and Christoph Niemann — one bold concept, massive white space, unified hand-drawn parallel-hatching pen-stroke language.
+Generate one standalone 3:4 vertical minimalist newspaper-style editorial illustration — one bold conceptual metaphor, massive white space, restrained warm-ink line work, and unified hand-drawn parallel hatching.
 
 Visual DNA:
 Warm off-white cream paper background (#fbf8f0). Around 60% empty paper (mostly the upper region and the left side). Confident hand-drawn warm-ink line work. Structural hatching only where volume/shadow makes sense. NO decorative elements, NO sparkles, NO patterns, NO shine.
@@ -176,7 +176,7 @@ Anti-slop constraints:
 **头顶符号**：小对话气泡（正在协作）
 
 ```text
-Generate one standalone 3:4 vertical editorial illustration in the tradition of Tom Gauld and Christoph Niemann — one bold concept, massive white space, unified hand-drawn parallel-hatching pen-stroke language.
+Generate one standalone 3:4 vertical minimalist newspaper-style editorial illustration — one bold conceptual metaphor, massive white space, restrained warm-ink line work, and unified hand-drawn parallel hatching.
 
 Visual DNA:
 Warm off-white cream paper background (#fbf8f0). Around 55% empty paper (mostly the upper region and the outer margins). Confident hand-drawn warm-ink line work. Structural hatching only where volume/shadow makes sense. NO decorative elements, NO sparkles, NO patterns, NO shine.

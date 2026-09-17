@@ -3,7 +3,7 @@
 > **规格**：3:4 竖版（小红书 / 公众号最优）
 > **IP**：小星妍 v6.2 · 蜂蜜黄五角星 + 一侧排线 + 头顶 Dreamer 小弧 + 手拿黑笔
 > **哲学**：一张图 = 一个概念 + 大量留白 + 3 处结构性排线 + 反差抓手
-> **对标**：Tom Gauld × Christoph Niemann
+> **视觉语言**：极简报刊编辑插画 · 大量留白 · 克制线稿 · 结构性排线
 >
 > **本次重写**：每张图直接对应文章一个认知锚点，隐喻更贴原文语义。
 
@@ -86,7 +86,7 @@
 **反差**：上部空白未来题 vs 下部画满 UI 的过去题
 
 ```text
-Generate one standalone 3:4 vertical editorial illustration in the tradition of Tom Gauld and Christoph Niemann — one bold concept, massive white space, unified hand-drawn parallel-hatching pen-stroke language.
+Generate one standalone 3:4 vertical minimalist newspaper-style editorial illustration — one bold conceptual metaphor, massive white space, restrained warm-ink line work, and unified hand-drawn parallel hatching.
 
 Visual DNA:
 Warm off-white cream paper background (#fbf8f0). Around 55% empty paper. Confident hand-drawn warm-ink line work. Structural hatching only where volume/shadow makes sense. NO decorative elements, NO sparkles, NO patterns, NO shine.
@@ -139,7 +139,7 @@ Anti-slop constraints:
 **反差**：厚厚经验（下部书排） vs 未知空白（上部）
 
 ```text
-Generate one standalone 3:4 vertical editorial illustration in the tradition of Tom Gauld and Christoph Niemann — one bold concept, massive white space, unified hand-drawn hatching.
+Generate one standalone 3:4 vertical minimalist newspaper-style editorial illustration — one bold conceptual metaphor, massive white space, restrained warm-ink line work, and unified hand-drawn parallel hatching.
 
 Visual DNA:
 Warm off-white cream paper (#fbf8f0). Around 60% empty paper (especially the upper region). Confident warm-ink hand-drawn lines with structural hatching only.
@@ -199,7 +199,7 @@ Anti-slop constraints:
 **反差**：上部两人对话式的连线 vs 下部被划掉的旧按钮
 
 ```text
-Generate one standalone 3:4 vertical editorial illustration in the tradition of Tom Gauld and Christoph Niemann — one bold concept, massive white space, unified hand-drawn hatching.
+Generate one standalone 3:4 vertical minimalist newspaper-style editorial illustration — one bold conceptual metaphor, massive white space, restrained warm-ink line work, and unified hand-drawn parallel hatching.
 
 Visual DNA:
 Warm off-white cream paper (#fbf8f0). Around 55% empty paper. Confident warm-ink hand-drawn lines with structural hatching only.
@@ -254,7 +254,7 @@ Anti-slop constraints:
 **反差**：上部一个巨大的 ? / 下部两个小身影一起托住它
 
 ```text
-Generate one standalone 3:4 vertical editorial illustration in the tradition of Tom Gauld and Christoph Niemann — one bold concept, massive white space, unified hand-drawn hatching.
+Generate one standalone 3:4 vertical minimalist newspaper-style editorial illustration — one bold conceptual metaphor, massive white space, restrained warm-ink line work, and unified hand-drawn parallel hatching.
 
 Visual DNA:
 Warm off-white cream paper (#fbf8f0). Around 55% empty paper (mostly the sides). Confident warm-ink hand-drawn lines with structural hatching.
@@ -311,7 +311,7 @@ Anti-slop constraints:
 **反差**：上部单一 App 图标（正在裂开/化开） vs 中部飞散的 Agent 群 vs 下部小星妍作为设计者
 
 ```text
-Generate one standalone 3:4 vertical editorial illustration in the tradition of Tom Gauld and Christoph Niemann — one bold concept, massive white space, unified hand-drawn hatching.
+Generate one standalone 3:4 vertical minimalist newspaper-style editorial illustration — one bold conceptual metaphor, massive white space, restrained warm-ink line work, and unified hand-drawn parallel hatching.
 
 Visual DNA:
 Warm off-white cream paper (#fbf8f0). Around 50% empty paper (mostly the side margins). Confident warm-ink hand-drawn lines with structural hatching.
@@ -373,7 +373,7 @@ Anti-slop constraints:
 **反差**：上部悬空锁盒（新的工作方式 = 目标） vs 下部小星妍举钥匙向上（追问 = 动作）
 
 ```text
-Generate one standalone 3:4 vertical editorial illustration in the tradition of Tom Gauld and Christoph Niemann — one bold concept, massive white space, unified hand-drawn hatching.
+Generate one standalone 3:4 vertical minimalist newspaper-style editorial illustration — one bold conceptual metaphor, massive white space, restrained warm-ink line work, and unified hand-drawn parallel hatching.
 
 Visual DNA:
 Warm off-white cream paper (#fbf8f0). Around 55% empty paper. Confident warm-ink hand-drawn lines with structural hatching.

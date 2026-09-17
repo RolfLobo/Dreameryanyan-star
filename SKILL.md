@@ -1,6 +1,6 @@
 ---
 name: dreamer-star-ip
-description: 生成 "dreamer-star-ip" 风格的编辑插画——蜂蜜黄五角星 IP + Tom Gauld × Christoph Niemann 风格的极简概念图。用于给中文文章、公众号、小红书、幻灯片、Notion 文档等生成 3:4 竖版或 4:3 横版正文配图；一张图一个概念 + 大量留白 + 3 处结构性排线 + 上下反差抓手。触发关键词：dreamer-star-ip、小星妍、Dreamer 妍妍、星星 IP、蜂蜜黄小星、编辑插画、Tom Gauld、Christoph Niemann、正文配图、爆款封面、认知图解、极简手绘、AI 时代插画、5 角星角色。
+description: 生成 "dreamer-star-ip" 风格的编辑插画——蜂蜜黄五角星 IP + 极简报刊编辑插画语言。用于给中文文章、公众号、小红书、幻灯片、Notion 文档等生成 3:4 竖版、4:3 横版或 1:1 方图；一张图一个概念 + 大量留白 + 3 处结构性排线 + 上下反差抓手。触发关键词：dreamer-star-ip、小星妍、Dreamer 妍妍、星星 IP、蜂蜜黄小星、编辑插画、正文配图、爆款封面、认知图解、极简手绘、AI 时代插画、5 角星角色。
 ---
 
 # dreamer-star-ip
@@ -11,7 +11,7 @@ description: 生成 "dreamer-star-ip" 风格的编辑插画——蜂蜜黄五角
 
 默认 IP 是 **小星妍**（Dreamer 妍妍）：微歪的**蜂蜜黄五角星** + 一侧手绘排线 + 头顶紧贴的 "Dreamer" 小弧 + 一颗随情境变形的**状态小符号**（罗盘 / 灯泡 / 皇冠 / 云朵 / `?` 等）+ 手拿黑笔。她**必须参与画面的核心动作**，不能只是站在旁边当装饰。
 
-对标：**Tom Gauld × Christoph Niemann** 的报刊编辑插画。核心哲学：**一张图 = 一个概念 + 大量留白 + 3 处结构性排线 + 反差抓手**。
+视觉语言：**极简报刊编辑插画**。核心哲学：**一张图 = 一个概念 + 大量留白 + 3 处结构性排线 + 反差抓手**。
 
 ## 先读这些参考
 
@@ -19,9 +19,9 @@ description: 生成 "dreamer-star-ip" 风格的编辑插画——蜂蜜黄五角
 
 - `references/style-dna.md` — 风格 DNA、颜色系统、纸底选择、留白率、排线语言
 - `references/xiaoxingyan-ip.md` — 小星妍 IP 完整规格：形态、表情、姿态库、Dreamer 弧、动作语法、禁忌
-- `references/status-glyphs.md` — 头顶状态符号词典（15 个符号 · 5 个族群）+ 挑选规则
+- `references/status-glyphs.md` — 头顶状态符号词典（16 个符号 · 5 个族群）+ 挑选规则
 - `references/composition-patterns.md` — 构图哲学、反差抓手、3:4 / 4:3 尺寸规则、同框 blob 规则
-- `references/prompt-template.md` — 单张图英文 prompt 生成模板（结构化 8 段式）
+- `references/prompt-template.md` — 单张图英文 prompt 生成模板（结构化 12 区块）
 - `references/qa-checklist.md` — 生成后 QA 清单 + 反 slop 规则
 - `examples/ai-era-product-interview-v6.2.md` — "AI 时代产品面试的观察" 7 张 v6.2 实例（含跳跃收尾图，低频视觉校准用，不要照抄）
 
@@ -61,9 +61,14 @@ description: 生成 "dreamer-star-ip" 风格的编辑插画——蜂蜜黄五角
 
 默认 **4-8 张**。短文 1-3 张；长文不建议超过 9 张——密度太高读者会麻木。
 
-### 3. 单张生图 prompt
+### 3. 单张生成
 
-用户明确说"生成 / 出提示词 / 做图 / 出 prompt"时，用 `references/prompt-template.md` 的 8 段式结构生成**英文 prompt**（图片模型对英文 prompt 理解更稳定）。
+先判断用户要的是成图还是提示词：
+
+- 用户说“生成 / 做图 / 出图”时，若当前环境有图像生成工具，必须直接生成图片；没有图像生成工具时，才交付可复制的英文 prompt，并明确说明当前无法直接生图。
+- 用户只说“出提示词 / 出 prompt”时，只交付 prompt，不调用图像生成工具。
+
+无论直接生图还是交付 prompt，都先用 `references/prompt-template.md` 的 12 区块结构写出完整英文生成指令，因为结构化约束能提高跨模型的一致性。
 
 每张 prompt 必须包含：
 
@@ -95,8 +100,9 @@ description: 生成 "dreamer-star-ip" 风格的编辑插画——蜂蜜黄五角
 
 - 一次一张，配一段中文说明"这张放在哪段之后 / 为什么这么画"
 - 用户如果一次要多张，**不要拼图**，一张一张给 prompt
-- 生成图保存到 `~/Desktop/Claude skills/` 或用户指定路径（若用户没说，默认桌面）
-- Prompt 本身也交付给用户（他们可能想手动调）
+- 有图像生成工具时，生成图保存到用户指定路径；用户没指定时保存到 `~/Desktop/Claude skills/`
+- 直接生图时也交付 Prompt，方便用户复现和调整
+- 无图像生成工具时，只交付 Prompt，并清楚标注未生成图片
 
 ## 常见错误 & 修法
 

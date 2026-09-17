@@ -33,6 +33,20 @@ The dreamer-star-ip character, 小星妍, is a slightly tilted, honey-yellow fiv
 
 This project draws on Ian's open-source work in [Ian Xiaohei Illustrations](https://github.com/helloianneo/ian-xiaohei-illustrations), particularly its approach to extracting cognitive anchors from Chinese writing, building shot lists, and structuring editorial illustration workflows. Thank you to Ian for sharing the methodology.
 
+See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for attribution and license details.
+
+## What This Adds
+
+Ian Xiaohei Illustrations provides a general workflow for turning Chinese writing into conceptual editorial illustrations. dreamer-star-ip extends that foundation into a reusable character-IP system focused on consistency across a series:
+
+- A complete character specification covering geometry, personality, poses, signatures, companion roles, and failure modes.
+- A 16-glyph state vocabulary across five intent families for expressing what the character is thinking or feeling.
+- Quantified composition rules for 3:4, 4:3, and 1:1 formats, including negative-space ratios, contrast axes, label limits, and hatching placement.
+- A 12-block prompt structure designed to preserve the same visual identity across topics and image models.
+- Tiered P0/P1/P2 quality control for deciding when to regenerate, edit locally, or accept a minor variation.
+
+The goal is not to replace Ian's broader illustration toolkit. It is to make one original character system more repeatable, inspectable, and extensible.
+
 ## Project Structure
 
 ```text
@@ -41,11 +55,12 @@ dreamer-star-ip/
 ├── references/
 │   ├── style-dna.md                Visual DNA, color, negative space, and hatching
 │   ├── xiaoxingyan-ip.md           Complete character specification and pose library
-│   ├── status-glyphs.md            15 status glyphs across five families
+│   ├── status-glyphs.md            16 status glyphs across five families
 │   ├── composition-patterns.md     Composition principles, contrast hooks, and formats
-│   ├── prompt-template.md          Eight-part English prompt template
+│   ├── prompt-template.md          12-block English prompt template
 │   └── qa-checklist.md             Post-generation QA and anti-slop checklist
 ├── example/                        Nine finished images shown in the gallery below
+├── THIRD_PARTY_NOTICES.md          Upstream attribution and license notice
 └── examples/
     ├── ai-era-product-interview-v6.2.md   Seven v6.2 prompt examples
     ├── six-vertical-illustrations.md      Six earlier portrait examples
